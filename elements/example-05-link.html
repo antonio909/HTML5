@@ -1,9 +1,15 @@
+<!-- For example, the following link element creates two hyperlinks (to the same page); -->
+
 <link rel="author license" href="/about">
+
+<!-- These attributes allow preloading the appropriate resource that is later used by an img element that has the corresponding values for its srcset and sizes attributes: -->
 
 <link rel="preload" as="image" imagesrcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w" imagesizes="50vw">
 
 <!-- ... later, or perhaps inserted dynamically ... -->
 <link src="wolf.jpg" alt="A rad wolf" srcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w" sizes="50vw">
+
+<!-- The imagesrcset attribute can be combined with the media attribute to preload the appropriate resource selected from a picture element's sources, for art direction: -->
 
 <link rel="preload" as="image" imagesrcset="dog-cropped-1x.jpg, dog-cropped-2x.jpg 2x" media="(max-width: 800px)">
 <link rel="preload" as="image" imagesrcset="dog-wide-1x.jpg, dog-wide-2x.jpg 2x" media="(min-width: 801px)">
@@ -13,5 +19,7 @@
   <source srcset="dog-cropped-1x.jpg, dog-cropped-2x.jpg 2x" media="(max-width: 800px)">
   <img src="dog-wide-1x.jpg" srcset="dog-wide-2x.jpg 2x" alt="An awesome dog">
 </picture>
+
+<!-- Removing the disabled attribute dynamically, e.g., using document.querySelector("link").removeAttribute("disabled"), will fetch and apply the style sheet: -->
 
 <link disabled rel="alternate stylesheet" href="css/pooh">
