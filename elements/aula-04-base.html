@@ -1,0 +1,20 @@
+The base element
+
+The base element allows authors to specify the document base URL for the purposes of parsing URLs, and the name of the default navigable for the purposes of following hyperlinks.
+The element does not represent any content beyond this information.
+
+There must be no more than one base element per document.
+
+A base element must have either an href attribute, a target attribute, or both.
+
+The href content attribute, if specified, must contain a valid URL potentially surrounded by spaces.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>This is an example for the &lt;base&gt; element</title>
+    <base href="https://www.example.com/news/index.html">
+  </head>
+  <body>
+    <p>Visit the <a href="archives.html">archives</a>.</p>
+  </body>
+</html>
